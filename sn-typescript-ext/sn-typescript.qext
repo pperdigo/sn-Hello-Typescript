@@ -1,0 +1,12 @@
+{
+  "name": "sn-typescript",
+  "version": "0.1.0",
+  "description": "",
+  "author": {
+    "name": "Pedro Perdigão",
+    "email": "pedro.perdigao@clusterdesign.io"
+  },
+  "icon": "extension",
+  "type": "visualization",
+  "supernova": true
+}

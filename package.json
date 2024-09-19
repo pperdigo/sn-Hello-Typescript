@@ -1,0 +1,55 @@
+{
+  "name": "sn-typescript",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "Pedro Perdigão",
+    "email": "pedro.perdigao@clusterdesign.io"
+  },
+  "keywords": [
+    "qlik",
+    "nebula",
+    "stardust"
+  ],
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.10.0"
+  },
+  "main": "dist/sn-typescript.js",
+  "module": "dist/sn-typescript.esm.js",
+  "scripts": {
+    "build": "nebula build --mode production --config nebula.config.cjs",
+    "build:dev": "nebula build --mode development --config nebula.config.cjs",
+    "sense": "nebula sense",
+    "lint": "eslint src",
+    "start": "nebula serve --config nebula.config.cjs",
+    "watch": "nodemon --watch src --ext js,html,ts,tsx --exec npm run build",
+    "test:e2e": "playwright test",
+    "test:e2e:report": "playwright show-report test/integration/test-report"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.24.7",
+    "@nebula.js/cli": "4.14.0",
+    "@nebula.js/cli-build": "4.14.0",
+    "@nebula.js/cli-sense": "4.14.0",
+    "@nebula.js/cli-serve": "4.14.0",
+    "@playwright/test": "^1.28.1",
+    "@qlik/sdk": "^0.12.0",
+    "@qlik/tsconfig": "^0.2.7",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^22.5.5",
+    "@types/qlik-engineapi": "^12.67.16",
+    "@types/qlik-visualizationextensions": "^4.0.9",
+    "eslint": "7.27.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-mocha": "9.0.0",
+    "typescript": "^5.6.2"
+  },
+  "peerDependencies": {
+    "@nebula.js/stardust": "^4.0.0"
+  }
+}
